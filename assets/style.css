@@ -1,0 +1,289 @@
+/* desing a ser tentado- https://www.livrariadavila.com.br/?srsltid=AfmBOoqPBNlVtmeZ8kxrPc_6_SLwbjlOpuR2OH2uJz1xt_NtsigSvw_R */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f4e7
+    
+}
+/*cabeçalho*/
+header {
+    height: 170px;
+    background-color: #f7f4e7;
+    text-align: center;
+    align-content: center;
+    font-size: 25px;
+    padding: 15px;
+    color: black;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+
+}
+.titulo{
+    width: 400px;
+    margin-left: -1250px;
+    margin-top: -125px;
+    border-radius: 100%;
+}
+h1{
+    font-size: 50px;
+    position: relative; /*mudar de posição de qualquer jeito*/
+    top: -160px;
+    left: -615px;
+    color: white;
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: normal;
+}
+hr{
+    position: relative;
+    margin: 0 5px 0 350px;
+    top: -190px;
+}
+h4{
+    position: relative;
+    font-size: 30px;
+    top: -240px;
+    left: 140px;
+    color: #223160;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.menu p{
+    color: #223160;
+    position: relative;
+    display: inline-block;
+    margin-right: 100px; 
+    top: -215px;
+    right: -180px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    /* efeito de passar o mouse por cima e aparecer a borda */
+    border: 2px solid transparent; /* Borda inicial transparente */
+    transition: border 0.3s ease; /* Transição suave para a borda */
+    
+}
+a{
+    text-decoration: none;
+    color: #223160;
+}
+
+.menu p:hover {
+    border: 1px solid #223160; /* Borda visível ao passar o mouse */
+  }
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card{
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    background-color: transparent; /* Card transparente */
+    overflow: hidden; /* Garante que o conteúdo não vaze */
+    width: 350px; 
+    height: 520px;   
+}
+
+.escondido {
+    visibility: hidden;
+    position: absolute; /* Posiciona sobre a imagem */
+    top: 0;
+    left: 0;
+    width: 100%; /* Preenche o card */
+    height: 100%; /* Preenche o card */   
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0px 20px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+    overflow-y: auto;   
+}
+
+.card:hover .escondido {
+    opacity: 1;
+}
+
+.rating {
+    color: #ffd700;
+    display: flex;
+    margin-top: -40px;
+}
+
+.card:hover .escondido{ 
+    visibility: visible;
+    
+}
+.card:hover .escondido{ 
+    transform: scale(1.05);
+    
+}
+
+.card:hover{
+    transform: scale(1.05);
+    
+}
+
+
+footer{
+    height: 50px;
+    background-color:  #223160;
+    text-align: center;
+    align-content: center;
+    color: white;
+}
+h5{
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* posição dos cards */
+.a{
+    margin-left: 185px;
+}
+.b{
+    margin-right: 185px;
+}
+.f{
+    margin-left: 185px;
+}
+.g{
+    margin-right: 185px;
+}
+.k{
+    margin-left: 185px;
+}
+.l{
+    margin-right: 185px;
+}
+
+
+.card-image {
+    
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease; /* Transição suave para o zoom */
+}
+
+.card:hover .card-image {
+    transform: scale(1.05); /* Efeito de zoom na imagem */
+}
+
+.card img {    
+    object-fit: contain; /* imagem inteira exibida */
+    object-fit: cover; /*  imagem preencha todo o card */
+  }
+
+h3{
+    padding: 40px 20px;
+    font-size: 25px;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 215;
+    font-style: normal;
+  }
+  
+p{
+    font-size: 17px;
+    margin: -3px 10px;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 215;
+    font-style: normal;
+}
+
+/* carrosel */
+.slider{
+    
+    width: 1000px;
+    height: 400px;
+    overflow: hidden; /* faz apenas uma img aparecer */
+    border-radius: 50px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+/* ocultar inputs */
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+
+}
+
+.slide img{
+    width: 1000px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 1000px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #223160;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #223160;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+
+
+

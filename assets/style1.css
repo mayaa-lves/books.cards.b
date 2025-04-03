@@ -1,0 +1,70 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(index.jpg); /* imagem como fundo */
+    background-size: cover; /* preenche o fundo todo */
+    background-position: center; /* centraliza a imagem no fundo */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    color: white;   
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 215;
+    font-style: normal;
+    background: rgba(0, 0, 0, 0.);
+  }
+
+  .nome{
+    margin: 15px 35px;
+    display: flex;
+    font-size: 20px;
+  }
+
+  .main{
+    flex: 1;
+    display: flex;
+  }
+
+  .card{
+    text-align: center;
+    margin-top: 250px;
+    font-size: 20px;
+   
+  }
+ 
+
+  .fim{
+    display: flex;
+    margin-left: 35px;
+    margin-top: 330px;
+  }
+
+  a{
+    color: white;
+  }
+
+  hr{
+    margin-right: 570px;
+    margin-left: 570px;
+  }
+h1{
+    font-size: 60px; 
+    transform: translateY(-100%); /* Posiciona o texto fora da tela na parte superior */
+    opacity: 0;
+    animation: descerTexto 1s ease-out forwards; 
+}
+
+@keyframes descerTexto {
+    to {
+      transform: translateY(0); /* Move o texto para a posição original */
+      opacity: 1;
+    }
+}
+.link{
+    padding-top: 5px;
+}
